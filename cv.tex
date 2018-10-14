@@ -1,0 +1,136 @@
+\documentclass[a4paper,11pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+\usepackage{fontawesome} % For social media icons
+%final bullet list for projects
+\usepackage{tabularx}
+\newcommand{\blankline}{\multicolumn{1}{c}{}\\}
+%\newcommand{\projectitem}{\footnotesize\textbullet~\ignorespaces} %Prefer the second command below
+\newcommand{\projectitem}{\footnotesize\makebox[1em][l]{\textbullet}\hangindent=1em\ignorespaces}
+% The second projectitem command aligns bullets properly, see tex.stackexchange.com/questions/262991/professional-cv-spacing-issues
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Herbie Bradley
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Information}
+% use icons here!!!
+\begin{tabular}{rl c rl}
+  {\large \faEnvelope}    & \href{mailto:mail@herbiebradley.com}{mail@herbiebradley.com}
+  && {\large \faLink}   & \href{https://herbiebradley.com}{herbiebradley.com} \\
+  {\large \faTwitter}    & \href{https://twitter.com/herbiebradley}{@herbiebradley}
+  && {\large \faGithub}   & \href{https://github.com/herbiebradley}{github.com/herbiebradley} \\
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	% use Sept. 2016 - present?
+  \textsc{Sept.} 2016 - & \textbf{Computer Science and Mathematics BSc \hfill{Keele University}} \\
+  \textsc{Present} & Predicted: First Class | 1st Year: \textbf{87\%} | 2nd Year: \textbf{85\%} \\
+  & Project: "Style Transfer with Deep Learning" | {\small Advisor: Prof. Peter Andras} \\
+  & \textbf{Highlights:} Natural Computation: 90\%, Android Development: 90\%, \\
+  & Probability: 100\%, Abstract Algebra: 87\%, Differential Equations: 92\% \\
+\end{tabular}
+
+%Section: Projects
+\section{Projects}
+\noindent
+\begin{tabularx}{\textwidth}{@{}r|>{\raggedright\arraybackslash}X@{}}
+  \textsc{CycleGAN} & \textbf{Python} \\
+  \textsc{2018} & Tensorflow implementation of the CycleGAN deep learning model for style transfer \href{https://arxiv.org/abs/1703.10593}{(Zhu et al., 2017)}. \\
+  & \projectitem Capable of general image-to-image translation. For example: Photo$\Leftrightarrow$Monet, Summer$\Leftrightarrow$Winter, Horse$\Leftrightarrow$Zebra. \\
+  & \projectitem Uses Tensorflow's Eager Execution model and Keras API. \\
+  & \projectitem Preliminary work for final undergraduate project. \\
+  \blankline
+  
+  \textsc{Personal Blog} & \textbf{HTML, CSS, Jekyll} \\
+  \textsc{2018} & A personal site and blog made with the Jekyll static site generator. \\
+  & \projectitem Uses custom CSS and HTML for a responsive theme. \\ %Look up other peoples website on CV
+  \blankline
+  
+  \textsc{Keele AcornMan} & \textbf{Java} \\
+  \textsc{2018} & A Pac-Man inspired game with Keele University themed art. \\
+  & \projectitem Includes path-finding AI, high scores. \\
+  & \projectitem Implements recursive solutions and iterative solutions. \\
+  \blankline
+  
+  \textsc{Farm Database App} & \textbf{Java - Android} \\
+  \textsc{2017} & A Binary Tree used to store character frequency. \\
+  & \projectitem Utilises an SQLite database to store and lookup records. \\
+  & \projectitem Utilises HashMaps, PriorityQueues, and recursion to place the characters within the right node.
+\end{tabularx}
+
+%Section: Skills
+\section{Skills}
+\begin{tabular}{rl}
+  \textsc{Knowledge of:} & Python, Java, Machine Learning (Tensorflow, Keras), Linux, \\ 
+  & Git, Android Studio, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf} \\
+  \textsc{Exposed to:} & C++, \textsc{SQL}, \textsc{HTML}, \textsc{CSS}, JavaScript, Ruby, \textsc{MATLAB}, Mathematica \\
+\end{tabular}
+
+%Section: Other
+\section{Other}
+\begin{tabular}{rl}
+  \textsc{Autumn} 2018 & Coursera Deep Learning Specialisation - 100\% \\
+  \textsc{Spring} 2014 & \textsc{ATCL} Diploma in Piano Performance (Distinction) \\
+\end{tabular}
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
