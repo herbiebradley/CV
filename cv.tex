@@ -1,6 +1,7 @@
 \documentclass[a4paper,11pt]{article}
 
 %A Few Useful Packages
+\usepackage[bottom=0.5in, heightrounded,]{geometry}
 \usepackage{marvosym}
 \usepackage{fontspec} 					    %for loading fonts
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
@@ -62,7 +63,7 @@ ItalicFont = Fontin-Italic.otf
 \begin{center}
 \begin{tabular}{rl c c c rl}
   \large{\faEnvelope}    & \href{mailto:mail@herbiebradley.com}{mail@herbiebradley.com}
-  &&&& \large{\faLink}   & \href{https://herbiebradley.com}{herbiebradley.com} \\
+  &&&& \large{\faLink}   & \href{https://herbiebradley.com/about}{herbiebradley.com} \\
   \large{\faTwitter}    & \href{https://twitter.com/herbiebradley}{@herbiebradley}
   &&&& \large{\faGithub}   & \href{https://github.com/herbiebradley}{github.com/herbiebradley} \\
 \end{tabular}
@@ -72,82 +73,89 @@ ItalicFont = Fontin-Italic.otf
 %Section: Education
 \section{Education}
 \begin{tabular}{rl}
-  2019 - 2020 & \textbf{MSc Data Analytics\hfill{University of Warwick}} \\
-  & \textbf{Dissertation:} \textit{Dataset Distillation for NLP using Deep Learning} \\
-  & \textbf{Selected classes:} Natural Language Processing, Agent-Based Systems, \\
-  & High Performance Computing, Research Methods, Data Mining. \\
+  2021 - 2024 & \textbf{PhD AI for Environmental Risk \hfill{University of Cambridge}} \\
+  & Title: \textit{Chemical mechanism emulation in climate model simulations} \\
+  & \textit{ for exascale supercomputing applications} \\
+  & \textbf{Supervisors:} Dr Luke Abraham, Dr Peer Nowack, Dr Doug McNeall, \\
+  & Professor Richard Turner \\
+  \\
+  2021 & \textbf{MRes AI for Environmental Risk\hfill{University of Cambridge}} \\
+  & Dissertation: \textit{Emulation of the chemistry-climate system} \\
+  & \textbf{Supervisors:} Professor Alex Archibald, Dr Luke Abraham, Dr Doug McNeall \\
+  \\
+  2020 & \textbf{MSc Data Analytics\hfill{University of Warwick}} \\
+  & \textbf{Distinction} | Dissertation: \textit{Dataset Distillation with Deep Learning} \\
   \\
   2019 & \textbf{BSc (Hons) Computer Science and Mathematics\hfill{Keele University}} \\
-  & First Class | Final Grade: \textbf{79\%} \\
-  & \textbf{Dissertation:} \textit{An Exploration of Style Transfer with Deep Learning} \\
-  & \textbf{Highlights:} Natural Computation: 90\% | Android Development: 90\% \\
-  & Probability: 100\% | Differential Equations: 92\% | Abstract Algebra: 87\% \\
+  & \textbf{First Class} |  Dissertation: \textit{An Exploration of Style Transfer with Deep Learning} \\
 \end{tabular}
+
+\section{Publications}
+\textsc{Workshop Papers \& Posters}
+
+\begin{itemize}
+    \item[–] \textbf{H. Bradley}, A. Findeis, K. Green, Y. Li, S. Mathis, and S. Thomas. `A Graph-Based Framework for Ecosystem Fragmentation from Remote Sensing Data'. In \textit{ESA Earth Observation Phi-Week}, October 2021.
+\end{itemize}
 
 %Section: Projects
-\section{Projects}
-\noindent
-\begin{tabularx}{\textwidth}{@{}r|>{\raggedright\arraybackslash}X@{}}
-  \textsc{Sentio} & \textbf{Python} \\
-  \textsc{2020} & Online deep learning model for classifying the sentiment of Tweets, in PyTorch.\\
-  & \projectitem Classifies Tweets as positive, negative or neutral sentiment. \\
-  & \projectitem Model is deployed to a web server using Flask. \\
-  \blankline
-  
-  \textsc{CycleGAN} & \textbf{Python} \\
-  \textsc{2019} & Tensorflow implementation of the CycleGAN deep learning model for style transfer \href{https://arxiv.org/abs/1703.10593}{(Zhu et al., 2017)}. \\
-  & \projectitem Capable of general image-to-image translation. For example: Photo$\Leftrightarrow$Monet, Summer$\Leftrightarrow$Winter, Horse$\Leftrightarrow$Zebra. \\
-  & \projectitem Uses Tensorflow's Eager Execution model and Keras API. \\
-  & \projectitem Part of final undergraduate project. \\
-  \blankline
-  
-  \textsc{Personal Blog} & \textbf{HTML, CSS, Jekyll} \\
-  \textsc{2018} & A personal site and blog made with the Jekyll static site generator. \\   
-  & \projectitem Uses custom CSS and HTML for a responsive theme. \\
-  & \projectitem Includes Disqus comments, Google analytics, and SEO optimisation. \\
-  \blankline
-  
-  \textsc{Farm Logger} & \textbf{Java - Android Studio} \\
-  \textsc{2017} & An Android app for management of a farm. \\
-  & \projectitem Utilises an SQLite database to allow users to add, edit and delete records. \\
-  & \projectitem Includes functionality to export the database to a CSV file. \\
-  & \projectitem Project for Android Development module.
-\end{tabularx}
+%\section{Projects}
+%\noindent
+%\begin{tabularx}{\textwidth}{@{}r|>{\raggedright\arraybackslash}X@{}}
+%  \textsc{\href{https://github.com/ai4er-cdt/geograph}{GeoGraph}} & \textbf{Python} \\
+%  \textsc{2021} & Open-source landscape ecology tool for analysing habitat fragmentation.\\
+%  & \projectitem GeoGraph can calculate novel-graph based metrics for ecosystem analysis based on earth observation data. \\
+%  & \projectitem Project was presented as a poster at the Climate Exp0 conference. \\
+%  \blankline
+%\end{tabularx}
 
-%Section: Skills
-\section{Skills}
-\begin{tabular}{rl}
-  \textsc{Knowledge of:} & Python, Machine Learning (Tensorflow, PyTorch, Keras), Linux, Git, \\
-  & Java (Android Dev.), C++ (OpenMP, MPI, CUDA), \textsc{MATLAB},
-  {\fb\LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf} \\
-  \textsc{Exposed to:} & R, \textsc{SQL}, \textsc{HTML}, \textsc{CSS}, JavaScript, Ruby,  Weka, Lua, Mathematica \\
-\end{tabular}
-\bigskip
+\section{Teaching}
+\begin{itemize}
+    \item[] \textbf{Advanced Machine Learning}\hfill{Lent Term 2022} \\
+    \textit{Supervisor}, Department of Engineering, University of Cambridge.
+    \item[] \textbf{Deep Neural Networks}\hfill{Lent Term 2022} \\
+    \textit{Supervisor}, Computer Laboratory, University of Cambridge.
+    \item[] \textbf{Effective Climate Change Mitigation Seminars}\hfill{Michaelmas Term 2022} \\
+    \textit{Organiser}, student-led 8 week seminar series in collaboration with and funded by Effective Altruism Cambridge.
+    \item[] \textbf{Climate Change Mitigation}\hfill{Michaelmas Term 2021} \\
+    \textit{Supervisor}, Department of Engineering, University of Cambridge.
+\end{itemize}
 
+%\bigskip
 %Section: Presentations
-\section{Presentations}
-\begin{tabular}{rl}
-  \textsc{January} 2020 & \textit{Finding Sparse, Trainable Neural Networks} - Class Presentation \\
-  \textsc{April} 2019 & \textit{Style Transfer with Deep Learning} - Keele ML Research Group \\
-  \textsc{March} 2019 & \textit{The NEAT \& HyperNEAT Algorithms} - Class Seminar \\
-\end{tabular}
-\bigskip
+%\section{Presentations}
+%\begin{tabular}{rl}
+%  \textsc{January} 2020 & \textit{Finding Sparse, Trainable Neural Networks} - Class Presentation \\
+%  \textsc{April} 2019 & \textit{Style Transfer with Deep Learning} - Keele ML Research Group \\
+%%  \textsc{March} 2019 & \textit{The NEAT \& HyperNEAT Algorithms} - Class Seminar \\
+%\end{tabular}
+%\bigskip
 
 %Section: Awards
 \section{Awards}
 \begin{tabular}{rl}
-  2019 - 2020 & Warwick Taught Masters Scholarship \\
+  2020 - 2024 & EPSRC CDT (MRes + PhD) Studentship \\
+  2019 - 2020 & University of Warwick Taught Masters Scholarship \\
 \end{tabular}
+% \bigskip
+%Section: Skills
+\section{Technical Skills}
+\begin{tabular}{rl}
+  \textsc{Knowledge of:} & Python, Machine Learning (PyTorch, Tensorflow, JAX), Linux, Git, \\
+  & Java, C (OpenMP, MPI), \textsc{MATLAB},
+  {\fb\LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf} \\
+  \textsc{Exposed to:} & C++ (CUDA), R, \textsc{SQL}, \textsc{HTML}, \textsc{CSS}, JavaScript, Ruby, Weka, Lua, \\
+  & Mathematica \\
+\end{tabular}
+%\bigskip
+%Section: Other
+%\section{Other}
+%\begin{tabular}{rl}
+%  \textsc{November} 2018 & Coursera Deep Learning Specialisation - 100\% \\
+%  \textsc{March} 2014 & \textsc{ATCL} Diploma in Piano Performance (Distinction) \\
+%\end{tabular}
 \bigskip
 
-%Section: Other
-\section{Other}
 \begin{tabular}{rl}
-  \textsc{November} 2018 & Coursera Deep Learning Specialisation - 100\% \\
-  \textsc{March} 2014 & \textsc{ATCL} Diploma in Piano Performance (Distinction) \\
-\end{tabular}
-
-\begin{tabular}{rl}
-  British national and UK resident. \\
+  British national and UK resident.
 \end{tabular}
 \end{document}
